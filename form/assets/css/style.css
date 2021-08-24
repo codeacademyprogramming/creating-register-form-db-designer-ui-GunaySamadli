@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container  .image{
+    position: relative;
+    z-index: 100;
+    width: 55%;
+    height: 100vh;
+    background-image: url(../images/bg-01.jpg);
+    background-size: cover;
+}
+
+.container  .image::before{
+    content: "";
+    z-index: -1;
+    opacity: .8;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: -webkit-linear-gradient(bottom,#e8519e,#c77ff2);
+}
+
+.container .form-main{
+    width: 45%;
+    display: flex;
+    padding: 0 20px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form-main form .form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.form-main .header h2{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.form-control label{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-control input{
+    display: block;
+    font-size: 14px;
+    width: 200%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+}
+
+.form-control.success input{
+    border: none;
+    border-bottom: 1px solid #2ecc71;
+    outline: none;
+}
+
+.form-control.error input{
+    border: none;
+    border-bottom: 1px solid #e74c3c;
+    outline: none;
+}
+
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.error small{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+small .errorFullname{
+    visibility: visible;
+}
+.sign-up{
+    padding: 10px 30px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    background-color: #e8519e;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.sign-in{
+    padding: 10px 30px;
+    border: none;
+    color: black;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 30px;
+}
